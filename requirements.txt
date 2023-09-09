@@ -1,0 +1,4 @@
+click
+tqdm
+opencv-python
+pexels-api==1.0.1
