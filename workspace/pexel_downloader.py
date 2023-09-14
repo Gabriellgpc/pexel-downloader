@@ -2,12 +2,13 @@
 # @Author: Luis Condados
 # @Date:   2023-09-09 16:50:19
 # @Last Modified by:   Luis Condados
-# @Last Modified time: 2023-09-09 16:51:38
+# @Last Modified time: 2023-09-09 18:51:05
 import logging
 import os
 
 from tqdm import tqdm
 
+from uuid import uuid4
 
 import requests
 # Import API class from pexels_api package
@@ -68,7 +69,8 @@ def download_from_pexel(query,
             break
 
         # Loop the five photos
-        for photo in tqdm(photos, desc='Page {}'.format(page)):
+        # for photo in tqdm(photos, desc='Page {}'.format(page)):
+        for photo in photos:
             max_images -= 1
             progress_bar.update(1)
             # Print photographer
@@ -79,8 +81,9 @@ def download_from_pexel(query,
             logging.debug('Photo original size: {}'.format(photo.original))
 
             # filename = os.path.join( dest_dir,  )
-            filename = '{}_{}.jpg'.format(photo.photographer.rsplit(' ')[-1],
-                                    photo.url.rsplit('/')[-2])
+            # filename = '{}_{}.jpg'.format(photo.photographer.rsplit(' ')[-1],
+            #                         photo.url.rsplit('/')[-2])
+            filename = '{}.jpg'.format(uuid4().hex)
             filename = os.path.join(dest_dir, filename)
 
             # to avoid download if already downloaded
