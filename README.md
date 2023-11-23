@@ -16,6 +16,17 @@ Pexel Downloader offers a user-friendly interface, robust performance, and the f
 🔧 **Installation:**
 To get started, simply clone this repository and follow the setup instructions in our documentation.
 
+🏃**How to use it**
+
+the first thing you need to do inder to run the `main.py`, is to get yout API Key from pexels.com,
+create your pexels account, go to `Images & Video API` and then `Your API Key`.
+Copy the API Key and export in your terminal export such as:
+
+```bash
+$ export PEXELS_API_KEY=<your pexels api key>
+```
+
+
 🙌 **Contributions Welcome:**
 We invite you to contribute to the development of Pexel Downloader. Feel free to submit bug reports, feature requests, or even make direct contributions. Let's build something amazing together!
 
