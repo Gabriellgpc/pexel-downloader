@@ -1,3 +1,5 @@
 from pexel_downloader import PexelDownloader
-downloader = PexelDownloader(api_key="YOUR_KEY_API")
+import os
+YOUR_API_KEY = os.environ.get("PEXEL_API_KEY")
+downloader = PexelDownloader(api_key=YOUR_API_KEY)
 downloader.download_images(query='sunset', num_images=200, save_directory='./images')

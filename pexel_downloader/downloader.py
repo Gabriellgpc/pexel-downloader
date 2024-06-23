@@ -42,6 +42,11 @@ class PexelDownloader:
 
         images = images[:num_images]
 
-        Parallel(n_jobs=-1)(delayed(self._download_image)(
-            img['src'][size], os.path.join(save_directory, f"{img['id']}.jpg")
-        ) for img in tqdm(images, desc="downloading ..."))
+        def process_image(img):
+            img_url = img['src'][size]
+            author  = img['photographer']
+            img_name_sufix = author.lower().replace(' ', '_').split('/')[0].split("\\")[0]
+            img_name = os.path.join(save_directory, f"{img['id']}_{img_name_sufix}.jpg")
+            self._download_image(img_url, img_name)
+
+        Parallel(n_jobs=-1)(delayed(process_image)(img) for img in tqdm(images, desc="Downloading ..."))
