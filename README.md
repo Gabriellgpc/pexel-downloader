@@ -16,16 +16,37 @@ Pexel Downloader offers a user-friendly interface, robust performance, and the f
 🔧 **Installation:**
 To get started, simply clone this repository and follow the setup instructions in our documentation.
 
+Or, simply run the following command on your python environment
+```bash
+pip install pexel-downloader
+```
+
 🏃**How to use it**
+
+First things first, you need to create an account on [pexels.com](https://www.pexels.com/)! Once you have login you can access the api page to get your unique API Key, you will find it in this link https://www.pexels.com/api/new/.
 
 the first thing you need to do inder to run the `main.py`, is to get yout API Key from pexels.com,
 create your pexels account, go to `Images & Video API` and then `Your API Key`.
 Copy the API Key and export in your terminal export such as:
 
-```bash
-$ export PEXELS_API_KEY=<your pexels api key>
-```
+Example of how to query for 200 images of nice sunsets 🌞. by default it will download the images on the original size, but you can select one of the other sizes.
 
+-   original
+-   large2x
+-   large
+-   medium
+-   small
+-   portrait
+-   landscape
+-   tiny
+
+
+```python
+from pexel_downloader import PexelDownloader
+
+downloader = PexelDownloader(api_key="YOUR_KEY_API")
+downloader.download_images(query='sunset', num_images=200, save_directory='./images', size='original')
+```
 
 🙌 **Contributions Welcome:**
 We invite you to contribute to the development of Pexel Downloader. Feel free to submit bug reports, feature requests, or even make direct contributions. Let's build something amazing together!

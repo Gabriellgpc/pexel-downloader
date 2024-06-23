@@ -1,0 +1,6 @@
+# folders to ignore
+images
+__pycache__
+build
+dist
+pexel_downloader.egg-info
