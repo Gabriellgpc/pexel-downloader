@@ -1,6 +1,8 @@
 # pexel-downloader
 "Pexel Downloader: Python-based web scraper for effortlessly downloading high-quality photos and videos from Pexels.com, open-source with MIT License."
 
+![pexel-downloader](pexel_downloader-logo.jpg)
+
 📷 **Pexel Downloader - Your Gateway to Stunning Visuals!** 🎥
 
 Welcome to the Pexel Downloader, a Python-based web scraper designed to help you effortlessly gather high-quality photos and videos from the Pexels.com website. Whether you're a content creator, developer, or just a visual enthusiast, this open-source tool is here to simplify your media acquisition process.
