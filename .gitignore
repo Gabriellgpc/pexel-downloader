@@ -1,6 +1,10 @@
 # folders to ignore
 images
+videos
 __pycache__
 build
 dist
 pexel_downloader.egg-info
+
+# extensions
+*.csv
