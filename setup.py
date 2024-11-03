@@ -5,11 +5,12 @@ from setuptools import setup, find_packages
 
 setup(
     name='pexel_downloader',
-    version='0.3.3',
+    version='0.4.0',
     packages=find_packages(),
     install_requires=[
         "requests",
         "joblib",
+        "click",
         "tqdm"
     ],
     author='Luis Condados',
@@ -24,4 +25,9 @@ setup(
         'Operating System :: OS Independent',
     ],
     python_requires='>=3.8',
+    entry_points={
+        "console_scripts": [
+            "pexel-downloader=pexel_downloader.downloader:main",
+        ],
+    },
 )
