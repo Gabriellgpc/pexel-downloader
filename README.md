@@ -20,8 +20,9 @@ Pexel Downloader offers a user-friendly interface, robust performance, and the f
 ---
 ### Prerequisites
 - **Python**: You’ll need Python 3.7 or later installed.
+- **Pexels acccount**: You'll need Pexels Account to create your own API key [pexels.com](https://www.pexels.com/).
 
-#### For Non-Coders: How to Install Python
+#### How to Install Python
 
 1. **Windows**:
    - Download the latest version of Python from [python.org](https://www.python.org/downloads/).
@@ -31,8 +32,8 @@ Pexel Downloader offers a user-friendly interface, robust performance, and the f
 2. **Linux**:
    - Open Terminal and install Python with your package manager:
      ```bash
-     sudo apt update
-     sudo apt install python3
+     sudo apt-get update -y
+     sudo apt-get install python3
      ```
    - Verify installation:
      ```bash
@@ -41,23 +42,22 @@ Pexel Downloader offers a user-friendly interface, robust performance, and the f
 
 ### Installing Pexel Downloader
 ---
-Once Python is installed, you can install Pexel Downloader directly from PyPI:
+Once Python is installed, you can install Pexel Downloader directly from Python pip package manager:
 
 ```bash
 pip install pexel-downloader
 ```
 
-### Using it
-
 #### 🔑 API Key Setup
 ---
 To use Pexel Downloader, you need a Pexels API key:
-1. Create an Account: Register on [pexels.com](https://www.pexels.com/).
+1. Create an Account on Pexels 
 2. Set API Key:
-    - Recommended: Set your API key as an environment variable PEXEL_API_KEY.
-    - Alternatively: Pexel Downloader will prompt you to enter it securely when you run it.
+    - Recommended: Set your API key as an environment variable PEXEL_API_KEY. Set your API key as system environment variable but to prevent by running/writing `export PEXEL_API_KEY = "YOUR_API_KEY"` in terminal as root & copy/pasting it into `/etc/profile` (for all users) or `~/.profile` (for yourself).
+    - Alternatively: Pexel Downloader will prompt you to enter it securely when you run it where you'll have to enter the key mannually or by copy/pasting it.
 
-#### Setting the API Key as an Environment Variable
+
+#### ⚠️Warning- I have only tested setting the API Key as an Environment Variable in Linux, not in Windows 
 ---
 1. **Windows**:
     ```bash
@@ -68,19 +68,13 @@ To use Pexel Downloader, you need a Pexels API key:
     export PEXEL_API_KEY="your_actual_api_key"
     ```
 
-Replace your_actual_api_key with the actual key you received from Pexels.
+Replace your_actual_api_key with the your key you received from Pexels.
 
-🙌 **Contributions Welcome:**
----
-We invite you to contribute to the development of Pexel Downloader. Feel free to submit bug reports, feature requests, or even make direct contributions. Let's build something amazing together!
+
 
 📜 **License:**
 ---
 Pexel Downloader is released under the MIT License, granting you the freedom to use and modify it for your projects.
 
-<!-- 🔗 **Links:**
-- [Demo Video](Link to Demo Video)
-- [Report Issues](Link to Issue Tracker)
-- [Contribute Guidelines](Link to Contribution Guidelines) -->
 
 Get started with Pexel Downloader today, and elevate your visual content game. Happy scraping!
