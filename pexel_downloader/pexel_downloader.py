@@ -64,6 +64,7 @@ class PexelDownloader:
             if not result['photos']:
                 break
         images = images[:num_images]
+
         def process_image(img):
             img_url = img['src'][size]
             author  = img['photographer']
@@ -92,6 +93,7 @@ class PexelDownloader:
             if not result['videos']:
                 break
         videos = videos[:num_videos]
+
         def process_video(video):
             video_files = video['video_files']
             video_url = next((file['link'] for file in video_files if file['quality'] == size), video_files[0]['link'])
